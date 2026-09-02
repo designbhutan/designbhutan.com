@@ -1,982 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Design Bhutan | Electrical, Lighting & Estimation</title>
-
-<meta name="description" content="Design Bhutan provides electrical drawing, lighting design, engineering consultancy, estimation, HVAC, ELV, fire alarm, public address and outdoor utility design services.">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#1b1b1b;
-    background:#ffffff;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-/* ================= NAVIGATION ================= */
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#ffffff;
-    border-bottom:1px solid #eeeeee;
-}
-
-.nav-container{
-    height:75px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:800;
-    color:#111111;
-    letter-spacing:-1px;
-}
-
-.logo span{
-    color:#c59a45;
-}
-
-.nav-links{
-    display:flex;
-    gap:30px;
-    list-style:none;
-}
-
-.nav-links a{
-    color:#333333;
-    font-size:15px;
-    font-weight:600;
-}
-
-.nav-links a:hover{
-    color:#c59a45;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:88vh;
-    display:flex;
-    align-items:center;
-    background:
-    linear-gradient(135deg,#f5f6f8 0%,#ffffff 65%);
-}
-
-.hero-content{
-    max-width:850px;
-    padding:90px 0;
-}
-
-.hero-label{
-    color:#c59a45;
-    font-size:14px;
-    font-weight:bold;
-    letter-spacing:3px;
-    text-transform:uppercase;
-}
-
-.hero h1{
-    font-size:clamp(45px,7vw,82px);
-    line-height:1.02;
-    margin:22px 0;
-    color:#101010;
-    letter-spacing:-3px;
-}
-
-.hero h1 span{
-    color:#c59a45;
-}
-
-.hero p{
-    max-width:700px;
-    font-size:19px;
-    color:#666666;
-    margin-bottom:35px;
-}
-
-.buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 26px;
-    border-radius:4px;
-    font-weight:bold;
-    background:#111111;
-    color:white;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#c59a45;
-}
-
-.btn-outline{
-    background:transparent;
-    border:1px solid #222222;
-    color:#222222;
-}
-
-.btn-outline:hover{
-    background:#111111;
-    color:white;
-}
-
-/* ================= GENERAL SECTIONS ================= */
-
-section{
-    padding:95px 0;
-}
-
-.section-heading{
-    max-width:700px;
-    margin-bottom:50px;
-}
-
-.section-heading small{
-    color:#c59a45;
-    font-size:13px;
-    font-weight:bold;
-    letter-spacing:3px;
-}
-
-.section-heading h2{
-    font-size:45px;
-    line-height:1.15;
-    margin:10px 0;
-    color:#111111;
-}
-
-.section-heading p{
-    color:#666666;
-}
-
-/* ================= ABOUT ================= */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.about-visual{
-    min-height:400px;
-    background:#111111;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-}
-
-.about-visual::before{
-    content:"";
-    width:260px;
-    height:260px;
-    border:1px solid #c59a45;
-    border-radius:50%;
-    position:absolute;
-}
-
-.about-visual::after{
-    content:"DB";
-    font-size:80px;
-    font-weight:800;
-    color:white;
-    letter-spacing:-5px;
-}
-
-.about-text h3{
-    font-size:30px;
-    margin-bottom:18px;
-}
-
-.about-text p{
-    color:#666666;
-    margin-bottom:18px;
-}
-
-.about-points{
-    margin-top:25px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.about-point{
-    border-left:3px solid #c59a45;
-    padding-left:15px;
-    font-weight:bold;
-}
-
-/* ================= SERVICES ================= */
-
-.services{
-    background:#f6f6f6;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.service-card{
-    background:white;
-    padding:32px;
-    border:1px solid #eeeeee;
-    min-height:220px;
-    transition:.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.service-number{
-    color:#c59a45;
-    font-weight:bold;
-    font-size:13px;
-    letter-spacing:2px;
-}
-
-.service-card h3{
-    margin:15px 0 10px;
-    font-size:21px;
-}
-
-.service-card p{
-    color:#666666;
-    font-size:15px;
-}
-
-/* ================= WHY US ================= */
-
-.why{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.why-card{
-    padding:30px;
-    border-top:3px solid #c59a45;
-    background:#fafafa;
-}
-
-.why-card h3{
-    margin-bottom:10px;
-}
-
-.why-card p{
-    color:#666666;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects{
-    background:#111111;
-}
-
-.projects .section-heading h2{
-    color:white;
-}
-
-.projects .section-heading p{
-    color:#aaaaaa;
-}
-
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.project{
-    min-height:270px;
-    padding:30px;
-    background:linear-gradient(145deg,#242424,#111111);
-    border:1px solid #333333;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    transition:.3s;
-}
-
-.project:hover{
-    transform:translateY(-5px);
-    border-color:#c59a45;
-}
-
-.project-number{
-    color:#c59a45;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-.project h3{
-    color:white;
-    font-size:22px;
-}
-
-.project p{
-    color:#aaaaaa;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    background:#f6f6f6;
-}
-
-.contact-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-}
-
-.contact-text h2{
-    font-size:45px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.contact-text p{
-    color:#666666;
-    max-width:550px;
-}
-
-.contact-details{
-    margin-top:30px;
-}
-
-.contact-item{
-    margin-bottom:20px;
-}
-
-.contact-item strong{
-    display:block;
-    margin-bottom:3px;
-}
-
-.contact-item a{
-    color:#555555;
-}
-
-.contact-item a:hover{
-    color:#c59a45;
-}
-
-.contact-box{
-    background:#111111;
-    color:white;
-    padding:40px;
-}
-
-.contact-box h3{
-    font-size:27px;
-    margin-bottom:20px;
-}
-
-.contact-box p{
-    color:#bbbbbb;
-    margin-bottom:25px;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#080808;
-    color:#888888;
-    text-align:center;
-    padding:25px 10px;
-    font-size:14px;
-}
-
-footer span{
-    color:#c59a45;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:850px){
-
-    .nav-container{
-        height:65px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        min-height:auto;
-    }
-
-    .hero-content{
-        padding:80px 0;
-    }
-
-    .hero h1{
-        font-size:52px;
-        letter-spacing:-2px;
-    }
-
-    section{
-        padding:70px 0;
-    }
-
-    .section-heading h2{
-        font-size:36px;
-    }
-
-    .about,
-    .contact-wrapper{
-        grid-template-columns:1fr;
-        gap:40px;
-    }
-
-    .service-grid,
-    .project-grid,
-    .why{
-        grid-template-columns:1fr;
-    }
-
-    .about-points{
-        grid-template-columns:1fr;
-    }
-
-    .about-visual{
-        min-height:300px;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Design Bhutan | Electrical Engineering & Lighting Design</title>
+
+    <meta name="description" content="Design Bhutan provides electrical drawing, lighting design, electrical engineering consultancy, estimation, HVAC, ELV, fire alarm and public address system services in Bhutan.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0b1f3a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #4db8ff;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            background: linear-gradient(
+                rgba(5, 25, 50, 0.80),
+                rgba(5, 25, 50, 0.80)
+            ),
+            url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #1e9bff;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .button:hover {
+            background: #0877c9;
+        }
+
+        .button-outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .button-outline:hover {
+            background: white;
+            color: #0b1f3a;
+        }
+
+        /* General sections */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #0b1f3a;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* About */
+        .about {
+            background: #f5f8fb;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* Why us */
+        .why-us {
+            background: #f5f8fb;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            text-align: center;
+        }
+
+        .why-card {
+            padding: 25px;
+        }
+
+        .why-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #0b1f3a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #4db8ff;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #061426;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .services,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">DESIGN BHUTAN</div>
 
-<nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<div class="container nav-container">
 
-<a href="#home" class="logo">
-DESIGN<span>BHUTAN</span>
-</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
 
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+        <div class="hero-content">
 
-</div>
+            <h1>Electrical Engineering & Lighting Design</h1>
 
-</nav>
+            <p>
+                Professional electrical drawing, lighting design,
+                estimation and engineering consultancy services in Bhutan.
+            </p>
 
+            <a href="#services" class="button">
+                Our Services
+            </a>
 
-<!-- HERO -->
+            <a href="#contact" class="button button-outline">
+                Contact Us
+            </a>
 
-<section class="hero" id="home">
+        </div>
 
-<div class="container">
+    </section>
 
-<div class="hero-content">
 
-<div class="hero-label">
-Engineering • Design • Estimation
-</div>
+    <!-- About -->
+    <section class="about" id="about">
 
-<h1>
-Smart Design.<br>
-Better <span>Solutions.</span>
-</h1>
+        <div class="section-title">
+            <h2>About Design Bhutan</h2>
+            <p>Engineering solutions designed for your project</p>
+        </div>
 
-<p>
-Professional electrical drawing, lighting design and estimation
-services for residential, commercial and institutional projects.
-</p>
+        <div class="about-content">
 
-<div class="buttons">
+            <p>
+                Design Bhutan provides professional electrical engineering,
+                lighting design and estimation services for residential,
+                commercial and other building projects.
+            </p>
 
-<a href="#services" class="btn">
-Explore Services
-</a>
+            <br>
 
-<a href="#contact" class="btn btn-outline">
-Get in Touch
-</a>
+            <p>
+                Our services cover electrical drawings, 3D lighting design,
+                load and illumination calculations, material and labour
+                estimation, electrical engineering consultancy and building
+                services systems.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-</div>
 
-</section>
+    <!-- Services -->
+    <section id="services">
 
+        <div class="section-title">
 
-<!-- ABOUT -->
+            <h2>Our Services</h2>
 
-<section id="about">
+            <p>
+                Complete electrical and building services solutions
+            </p>
 
-<div class="container">
+        </div>
 
-<div class="section-heading">
 
-<small>ABOUT DESIGN BHUTAN</small>
+        <div class="services">
 
-<h2>
-Engineering ideas into practical solutions.
-</h2>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Electrical Drawing</h3>
+                <p>
+                    Professional electrical layouts, wiring drawings,
+                    single line diagrams and electrical plans.
+                </p>
+            </div>
 
-<p>
-We provide professional design and engineering services
-focused on accuracy, functionality, efficiency and practical
-construction requirements.
-</p>
 
-</div>
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>Lighting Design</h3>
+                <p>
+                    Modern lighting design and 3D visualization
+                    for residential and commercial spaces.
+                </p>
+            </div>
 
 
-<div class="about">
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Load Calculation</h3>
+                <p>
+                    Electrical load calculations and illumination
+                    calculations for efficient system design.
+                </p>
+            </div>
+
 
-<div class="about-visual"></div>
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h3>Cost Estimation</h3>
+                <p>
+                    Detailed estimation of electrical materials,
+                    equipment and labour costs.
+                </p>
+            </div>
 
-<div class="about-text">
 
-<h3>
-Design that works.
-</h3>
+            <div class="service-card">
+                <div class="service-icon">👷</div>
+                <h3>Engineering Consultancy</h3>
+                <p>
+                    Electrical engineering consultation and technical
+                    solutions for building projects.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h3>HVAC System</h3>
+                <p>
+                    HVAC electrical requirements and building
+                    services coordination.
+                </p>
+            </div>
 
-<p>
-Design Bhutan provides technical design services for building
-electrical systems, lighting, estimation and related building
-services.
-</p>
 
-<p>
-Our approach combines engineering knowledge with modern design
-tools to create clear, practical and construction-ready solutions.
-</p>
+            <div class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3>ELV System</h3>
+                <p>
+                    Extra Low Voltage system planning and design
+                    for modern buildings.
+                </p>
+            </div>
 
-<div class="about-points">
 
-<div class="about-point">
-Accurate
-</div>
+            <div class="service-card">
+                <div class="service-icon">🔥</div>
+                <h3>Fire Alarm System</h3>
+                <p>
+                    Fire alarm system planning and electrical
+                    design for building safety.
+                </p>
+            </div>
 
-<div class="about-point">
-Practical
-</div>
 
-<div class="about-point">
-Efficient
-</div>
+            <div class="service-card">
+                <div class="service-icon">🔊</div>
+                <h3>Public Address System</h3>
+                <p>
+                    Public address and communication system
+                    planning for buildings and facilities.
+                </p>
+            </div>
 
-<div class="about-point">
-Professional
-</div>
 
-</div>
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Outdoor Utility System</h3>
+                <p>
+                    Outdoor electrical utility and infrastructure
+                    planning and design.
+                </p>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-</div>
 
-</section>
+    <!-- Why Choose Us -->
+    <section class="why-us" id="why-us">
 
+        <div class="section-title">
 
-<!-- SERVICES -->
+            <h2>Why Choose Design Bhutan?</h2>
 
-<section class="services" id="services">
+            <p>
+                Practical engineering solutions for your project
+            </p>
 
-<div class="container">
+        </div>
 
-<div class="section-heading">
 
-<small>OUR SERVICES</small>
+        <div class="why-grid">
 
-<h2>
-Complete design & engineering services.
-</h2>
+            <div class="why-card">
+                <h3>Professional Design</h3>
+                <p>
+                    Carefully prepared electrical and lighting
+                    designs based on project requirements.
+                </p>
+            </div>
 
-<p>
-From electrical drawings and lighting design to building
-services and cost estimation.
-</p>
 
-</div>
+            <div class="why-card">
+                <h3>Complete Solutions</h3>
+                <p>
+                    Electrical, lighting, HVAC, ELV, fire alarm
+                    and other building services.
+                </p>
+            </div>
 
 
-<div class="service-grid">
+            <div class="why-card">
+                <h3>Accurate Estimation</h3>
+                <p>
+                    Clear material and labour cost estimation
+                    to help you plan your project budget.
+                </p>
+            </div>
 
-<div class="service-card">
-<div class="service-number">01</div>
-<h3>Electrical Drawing</h3>
-<p>
-Professional electrical layouts, wiring drawings,
-single-line diagrams and distribution drawings.
-</p>
-</div>
+        </div>
 
+    </section>
 
-<div class="service-card">
-<div class="service-number">02</div>
-<h3>3D Lighting Design</h3>
-<p>
-Modern 3D lighting concepts to visualize the final
-appearance of interior and exterior spaces.
-</p>
-</div>
 
+    <!-- Contact -->
+    <section class="contact" id="contact">
 
-<div class="service-card">
-<div class="service-number">03</div>
-<h3>Load & Illumination Calculation</h3>
-<p>
-Electrical load calculations and lighting illumination
-calculations for efficient and suitable systems.
-</p>
-</div>
+        <div class="section-title">
 
+            <h2>Let's Work Together</h2>
 
-<div class="service-card">
-<div class="service-number">04</div>
-<h3>Cost Estimation</h3>
-<p>
-Material and labour cost estimation to help clients
-understand project requirements and budgets.
-</p>
-</div>
+            <p>
+                Contact us for electrical design, lighting design
+                and engineering consultancy.
+            </p>
 
+        </div>
 
-<div class="service-card">
-<div class="service-number">05</div>
-<h3>Electrical Engineering Consultancy</h3>
-<p>
-Technical engineering advice, planning and support
-for electrical building projects.
-</p>
-</div>
 
+        <p>
+            📧 Email:
+            <a href="mailto:yumchen94@gmail.com">
+                yumchen94@gmail.com
+            </a>
+        </p>
 
-<div class="service-card">
-<div class="service-number">06</div>
-<h3>HVAC System</h3>
-<p>
-Planning and design support for heating, ventilation
-and air-conditioning systems.
-</p>
-</div>
 
+        <p>
+            📱 Phone:
+            <a href="tel:+97577428927">
+                +975 77428927
+            </a>
+        </p>
 
-<div class="service-card">
-<div class="service-number">07</div>
-<h3>ELV System</h3>
-<p>
-Extra-low-voltage system planning and design for
-modern buildings.
-</p>
-</div>
 
+        <br>
 
-<div class="service-card">
-<div class="service-number">08</div>
-<h3>Fire Alarm System</h3>
-<p>
-Fire detection and alarm system design for safer
-building environments.
-</p>
-</div>
+        <a href="mailto:yumchen94@gmail.com" class="button">
+            Get a Quote
+        </a>
 
+    </section>
 
-<div class="service-card">
-<div class="service-number">09</div>
-<h3>Public Address System</h3>
-<p>
-Public address and communication system design for
-buildings and facilities.
-</p>
-</div>
 
+    <!-- Footer -->
+    <footer>
 
-<div class="service-card">
-<div class="service-number">10</div>
-<h3>Outdoor Utility System</h3>
-<p>
-Outdoor electrical and utility infrastructure
-planning and design.
-</p>
-</div>
+        <p>
+            © 2026 Design Bhutan. All Rights Reserved.
+        </p>
 
-</div>
+        <p>
+            Electrical Engineering • Lighting Design • Estimation
+        </p>
 
-</div>
-
-</section>
-
-
-<!-- WHY DESIGN BHUTAN -->
-
-<section>
-
-<div class="container">
-
-<div class="section-heading">
-
-<small>WHY DESIGN BHUTAN</small>
-
-<h2>
-Focused on quality and practical engineering.
-</h2>
-
-</div>
-
-<div class="why">
-
-<div class="why-card">
-
-<h3>Technical Accuracy</h3>
-
-<p>
-Our designs are developed with attention to engineering
-requirements, calculations and practical application.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<h3>Clear Documentation</h3>
-
-<p>
-Easy-to-understand drawings and documentation help
-clients and contractors work efficiently.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<h3>Cost Awareness</h3>
-
-<p>
-Our estimation services help clients understand material,
-labour and overall project costs.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section class="projects" id="projects">
-
-<div class="container">
-
-<div class="section-heading">
-
-<small>OUR WORK</small>
-
-<h2>
-Design solutions for real projects.
-</h2>
-
-<p>
-Selected project categories will be showcased here as
-the Design Bhutan portfolio grows.
-</p>
-
-</div>
-
-
-<div class="project-grid">
-
-<div class="project">
-
-<div class="project-number">PROJECT 01</div>
-
-<h3>Residential Electrical Design</h3>
-
-<p>
-Electrical drawings, load calculations and estimation.
-</p>
-
-</div>
-
-
-<div class="project">
-
-<div class="project-number">PROJECT 02</div>
-
-<h3>Architectural Lighting</h3>
-
-<p>
-3D lighting concepts and illumination calculations.
-</p>
-
-</div>
-
-
-<div class="project">
-
-<div class="project-number">PROJECT 03</div>
-
-<h3>Building Services</h3>
-
-<p>
-Electrical, HVAC and ELV engineering solutions.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="contact-wrapper">
-
-<div class="contact-text">
-
-<h2>
-Have a project in mind?
-</h2>
-
-<p>
-Whether you need electrical drawings, lighting design,
-calculations, estimation or engineering consultancy,
-get in touch with Design Bhutan.
-</p>
-
-
-<div class="contact-details">
-
-<div class="contact-item">
-
-<strong>Email</strong>
-
-<a href="mailto:yumchen94@gmail.com">
-yumchen94@gmail.com
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Phone</strong>
-
-<a href="tel:+97577428927">
-+975 77428927
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Location</strong>
-
-Bhutan
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="contact-box">
-
-<h3>
-Let's discuss your project.
-</h3>
-
-<p>
-Contact us for electrical design, lighting design,
-estimation and engineering consultancy services.
-</p>
-
-<a href="mailto:yumchen94@gmail.com" class="btn">
-Send an Email
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 <span>Design Bhutan</span>.
-All rights reserved.
-
-</footer>
+    </footer>
 
 </body>
 </html>
