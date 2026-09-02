@@ -1,1 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Design Bhutan | Engineering & Design</title>
+
+    <meta name="description" content="Design Bhutan - Engineering, electrical, lighting and building design services in Bhutan.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #111111;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #c89b3c;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #c89b3c;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 7%;
+            background: linear-gradient(135deg, #f8f8f8, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero small {
+            color: #c89b3c;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 1.05;
+            margin: 18px 0;
+            color: #111;
+        }
+
+        .hero h1 span {
+            color: #c89b3c;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 19px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 27px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #c89b3c;
+        }
+
+        .button-outline {
+            background: transparent;
+            color: #111;
+            border: 1px solid #111;
+        }
+
+        .button-outline:hover {
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 7%;
+        }
+
+        .section-title {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-title small {
+            color: #c89b3c;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 10px;
+            color: #111;
+        }
+
+        .section-title p {
+            color: #666;
+            margin-top: 12px;
+        }
+
+        /* About */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: #f5f5f5;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        /* Services */
+        .services {
+            background: #f7f7f7;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border: 1px solid #eeeeee;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .service-number {
+            color: #c89b3c;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .service-card h3 {
+            margin: 15px 0 10px;
+            font-size: 22px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            min-height: 260px;
+            background: #eeeeee;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .project-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .project-card p {
+            color: #666;
+        }
+
+        /* Contact */
+        .contact {
+            background: #111;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #bbbbbb;
+        }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #cccccc;
+        }
+
+        .contact-info strong {
+            color: white;
+        }
+
+        .contact-button {
+            background: #c89b3c;
+        }
+
+        .contact-button:hover {
+            background: white;
+            color: #111;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: #888;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 5%;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .about,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">DESIGN<span>BHUTAN</span></a>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <small>Engineering • Design • Innovation</small>
+
+            <h1>
+                Designing<br>
+                <span>Better Spaces.</span>
+            </h1>
+
+            <p>
+                Design Bhutan provides thoughtful engineering and design
+                solutions for modern buildings, electrical systems,
+                lighting and infrastructure.
+            </p>
+
+            <a href="#services" class="button">Our Services</a>
+            <a href="#contact" class="button button-outline">Contact Us</a>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <div class="section-title">
+            <small>ABOUT US</small>
+            <h2>Engineering with purpose.</h2>
+        </div>
+
+        <div class="about">
+
+            <div class="about-box">
+                DB
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    <strong>Design Bhutan</strong> is a design-focused
+                    engineering platform dedicated to creating practical,
+                    efficient and modern solutions.
+                </p>
+
+                <p>
+                    From electrical systems to architectural lighting,
+                    our goal is to combine engineering knowledge with
+                    creative design.
+                </p>
+
+                <p>
+                    We believe good design should not only look beautiful.
+                    It should be safe, efficient, practical and built to last.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section class="services" id="services">
+
+        <div class="section-title">
+            <small>WHAT WE DO</small>
+            <h2>Our Services</h2>
+            <p>
+                Professional design and engineering services for
+                residential, commercial and institutional projects.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <h3>Electrical Design</h3>
+                <p>
+                    Electrical layouts, load calculations,
+                    distribution systems and building electrical design.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <h3>Lighting Design</h3>
+                <p>
+                    Modern lighting concepts designed for comfort,
+                    appearance, efficiency and functionality.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <h3>Building Design</h3>
+                <p>
+                    Practical engineering solutions for residential
+                    and commercial buildings.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">04</div>
+                <h3>Engineering Consultancy</h3>
+                <p>
+                    Technical advice, planning and engineering
+                    support for building projects.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">05</div>
+                <h3>Energy Solutions</h3>
+                <p>
+                    Energy-efficient solutions designed to reduce
+                    unnecessary energy consumption.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">06</div>
+                <h3>Technical Drawings</h3>
+                <p>
+                    Clear and professional engineering drawings
+                    for construction and documentation.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <div class="section-title">
+            <small>OUR WORK</small>
+            <h2>Featured Projects</h2>
+            <p>
+                A selection of projects and design work.
+            </p>
+        </div>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Residential Project</h3>
+                <p>Electrical & Lighting Design</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Commercial Project</h3>
+                <p>Building Engineering Design</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Lighting Project</h3>
+                <p>Architectural Lighting Design</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+            <small>GET IN TOUCH</small>
+            <h2>Let's create something better.</h2>
+            <p>
+                Have a project in mind? Get in touch with Design Bhutan.
+            </p>
+        </div>
+
+        <div class="contact-box">
+
+            <div class="contact-info">
+
+                <p>
+                    <strong>Email:</strong><br>
+                    your@email.com
+                </p>
+
+                <p>
+                    <strong>Location:</strong><br>
+                    Bhutan
+                </p>
+
+                <p>
+                    <strong>Phone:</strong><br>
+                    +975 XXXXXXXX
+                </p>
+
+            </div>
+
+            <div>
+                <a href="mailto:your@email.com"
+                   class="button contact-button">
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Design Bhutan. All rights reserved.
+    </footer>
+
+</body>
+</html>
