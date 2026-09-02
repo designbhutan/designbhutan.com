@@ -245,7 +245,48 @@
             font-size: 15px;
         }
 
+/* ================= DESIGN SERVICES ================= */
 
+.design-services {
+    background: #ffffff;
+}
+
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.design-card {
+    padding: 32px;
+    background: #f7f9fc;
+    border: 1px solid #e3e9f0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.design-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.design-number {
+    font-size: 15px;
+    font-weight: bold;
+    color: #18a8ff;
+    margin-bottom: 15px;
+}
+
+.design-card h3 {
+    color: #071a33;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.design-card p {
+    color: #687586;
+    font-size: 15px;
+}
         /* ================= PROCESS ================= */
 
         .process {
@@ -411,7 +452,7 @@
 
             .services {
                 grid-template-columns: repeat(2, 1fr);
-            }
+           }
 
             .process-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -424,7 +465,9 @@
             .hero h1 {
                 font-size: 45px;
             }
-        }
+        .design-grid {
+    grid-template-columns: repeat(2, 1fr);
+} }
 
 
         @media (max-width: 650px) {
@@ -467,7 +510,9 @@
             .section-title h2 {
                 font-size: 31px;
             }
-        }
+       .design-grid {
+    grid-template-columns: 1fr;
+} }
 
     </style>
 </head>
@@ -730,7 +775,111 @@
 
     </section>
 
+<!-- ================= DESIGN SERVICES ================= -->
 
+<section class="design-services">
+
+    <div class="section-title">
+
+        <h2>Our Design Services</h2>
+
+        <p>
+            Professional design and engineering support for your project
+        </p>
+
+    </div>
+
+
+    <div class="design-grid">
+
+
+        <div class="design-card">
+
+            <div class="design-number">01</div>
+
+            <h3>Electrical Design</h3>
+
+            <p>
+                Complete electrical drawings, wiring layouts,
+                distribution layouts and single line diagrams.
+            </p>
+
+        </div>
+
+
+        <div class="design-card">
+
+            <div class="design-number">02</div>
+
+            <h3>Lighting Design</h3>
+
+            <p>
+                Modern lighting layouts and 3D lighting concepts
+                for attractive and functional spaces.
+            </p>
+
+        </div>
+
+
+        <div class="design-card">
+
+            <div class="design-number">03</div>
+
+            <h3>Electrical Calculations</h3>
+
+            <p>
+                Load calculation, cable sizing, voltage drop
+                and illumination calculation.
+            </p>
+
+        </div>
+
+
+        <div class="design-card">
+
+            <div class="design-number">04</div>
+
+            <h3>Cost Estimation</h3>
+
+            <p>
+                Material quantity take-off and labour cost
+                estimation for electrical works.
+            </p>
+
+        </div>
+
+
+        <div class="design-card">
+
+            <div class="design-number">05</div>
+
+            <h3>Building Services</h3>
+
+            <p>
+                HVAC, ELV, fire alarm and public address
+                system design coordination.
+            </p>
+
+        </div>
+
+
+        <div class="design-card">
+
+            <div class="design-number">06</div>
+
+            <h3>Outdoor Utilities</h3>
+
+            <p>
+                Outdoor electrical utility and infrastructure
+                planning for building projects.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
     <!-- ================= PROCESS ================= -->
 
     <section class="process" id="process">
