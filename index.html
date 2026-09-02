@@ -1213,7 +1213,38 @@
     </div>
 </section>
 
+<!-- ================= SERVICE POPUP ================= -->
 
+<div id="servicePopup" class="service-popup">
+
+    <div class="service-popup-content">
+
+        <button class="close-popup" onclick="closeService()">×</button>
+
+        <div class="popup-icon">⚡</div>
+
+        <h2 id="popupTitle">Electrical Drawing</h2>
+
+        <p id="popupDescription">
+            Professional electrical drawings for residential,
+            commercial and institutional buildings.
+        </p>
+
+        <ul id="popupList">
+            <li>Electrical layout drawings</li>
+            <li>Wiring diagrams</li>
+            <li>Single line diagrams</li>
+            <li>Distribution board layouts</li>
+            <li>Detailed electrical design</li>
+        </ul>
+
+        <a href="#contact" class="btn primary" onclick="closeService()">
+            Request This Service
+        </a>
+
+    </div>
+
+</div>
   <!-- ================= FOOTER ================= -->
 <footer class="footer">
 
@@ -1261,7 +1292,36 @@
         ☎
     </a>
 
+<script>
 
+function openService(serviceName) {
+
+    const popup = document.getElementById("servicePopup");
+    const title = document.getElementById("popupTitle");
+
+    title.textContent = serviceName;
+
+    popup.classList.add("active");
+}
+
+
+function closeService() {
+
+    const popup = document.getElementById("servicePopup");
+
+    popup.classList.remove("active");
+}
+
+
+document.getElementById("servicePopup").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+        closeService();
+    }
+
+});
+
+</script>
 </body>
 
 </html>
