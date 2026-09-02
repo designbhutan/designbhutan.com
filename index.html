@@ -372,50 +372,205 @@
 
         /* ================= CONTACT ================= */
 
-        .contact {
-            background:
-                linear-gradient(
-                    rgba(4, 22, 45, 0.95),
-                    rgba(4, 22, 45, 0.95)
-                );
+.contact {
+    background: #f7f9fc;
+}
 
-            color: white;
-            text-align: center;
-        }
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
 
-        .contact .section-title h2 {
-            color: white;
-        }
+.contact-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #e3e9f0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
-        .contact .section-title p {
-            color: #c3cfdb;
-        }
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
 
-        .contact-info {
-            max-width: 650px;
-            margin: auto;
-        }
+.contact-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
-        .contact-item {
-            margin: 18px;
-            font-size: 18px;
-        }
+.contact-card h3 {
+    color: #071a33;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
 
-        .contact-item a {
-            color: #18a8ff;
-            text-decoration: none;
-        }
+.contact-card p {
+    color: #687586;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: #18a8ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-cta {
+    margin-top: 50px;
+    padding: 45px 25px;
+    background: #071a33;
+    border-radius: 12px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-cta h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-cta p {
+    color: #c8d3df;
+    margin-bottom: 25px;
+}
+
+.contact-cta .btn {
+    display: inline-block;
+}
+
+/* Contact Mobile */
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cta h3 {
+        font-size: 23px;
+    }
+}
 
 
-        /* ================= FOOTER ================= */
+       /* ================= FOOTER ================= */
 
-        footer {
-            background: #041225;
-            color: #9baaba;
-            text-align: center;
-            padding: 25px 15px;
-            font-size: 14px;
-        }
+.footer {
+    background: #061426;
+    color: #ffffff;
+    padding: 60px 8% 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+.footer-brand h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-brand h2 span {
+    color: #18a8ff;
+}
+
+.footer-brand p {
+    color: #aebdcc;
+    max-width: 380px;
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.footer-links a {
+    color: #aebdcc;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #18a8ff;
+}
+
+.footer-contact p {
+    color: #aebdcc;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #8493a5;
+    font-size: 13px;
+}
+
+/* Footer Mobile */
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {
+        padding: 45px 6% 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
 
 
         /* ================= WHATSAPP ================= */
@@ -1019,72 +1174,91 @@
 
 
     <!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+    <div class="section-title">
+        <h2>Let's Discuss Your Project</h2>
+        <p>Have a project in mind? Get in touch with Design Bhutan.</p>
+    </div>
 
-    <section class="contact" id="contact">
+    <div class="contact-grid">
 
-        <div class="section-title">
-
-            <h2>Let's Discuss Your Project</h2>
-
-            <p>
-                Need electrical drawings, lighting design or
-                project estimation? Get in touch with us.
-            </p>
-
-        </div>
-
-
-        <div class="contact-info">
-
-            <div class="contact-item">
-
-                📧
-                <strong>Email:</strong>
-
-                <a href="mailto:yumchen94@gmail.com">
-                    yumchen94@gmail.com
-                </a>
-
-            </div>
-
-
-            <div class="contact-item">
-
-                📱
-                <strong>Phone:</strong>
-
-                <a href="tel:+97577428927">
-                    +975 77428927
-                </a>
-
-            </div>
-
-
-            <br>
-
-            <a href="mailto:yumchen94@gmail.com" class="button">
-                Request a Quote
+        <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <h3>Email</h3>
+            <p>Send us your project requirements.</p>
+            <a href="mailto:yumchen94@gmail.com">
+                yumchen94@gmail.com
             </a>
-
         </div>
 
-    </section>
+        <div class="contact-card">
+            <div class="contact-icon">☎</div>
+            <h3>Phone</h3>
+            <p>Talk directly with us about your project.</p>
+            <a href="tel:+97577428927">
+                +975 77428927
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>Quickly discuss your requirements with us.</p>
+            <a href="https://wa.me/97577428927" target="_blank">
+                Chat on WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+    <div class="contact-cta">
+        <h3>Need an Electrical Design or Estimate?</h3>
+        <p>Contact Design Bhutan today for professional engineering support.</p>
+
+        <a href="mailto:yumchen94@gmail.com?subject=Project%20Enquiry"
+           class="btn primary">
+            Request a Quote
+        </a>
+    </div>
+</section>
 
 
-    <!-- ================= FOOTER ================= -->
+  <!-- ================= FOOTER ================= -->
+<footer class="footer">
 
-    <footer>
+    <div class="footer-content">
 
-        <p>
-            © 2026 Design Bhutan. All Rights Reserved.
-        </p>
+        <div class="footer-brand">
+            <h2>DESIGN <span>BHUTAN</span></h2>
+            <p>
+                Professional Electrical, Lighting and Building Services
+                Design Solutions.
+            </p>
+        </div>
 
-        <p>
-            Electrical Engineering • Lighting Design • Estimation
-        </p>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
 
-    </footer>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>📧 yumchen94@gmail.com</p>
+            <p>☎ +975 77428927</p>
+            <p>📍 Bhutan</p>
+        </div>
 
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Design Bhutan. All Rights Reserved.</p>
+        <p>Electrical Design • Lighting Design • Estimation</p>
+    </div>
+
+</footer>
 
     <!-- ================= WHATSAPP ================= -->
 
