@@ -1383,14 +1383,181 @@
 
 <script>
 
+<script>
+
+const serviceData = {
+
+    "Electrical Drawing": {
+        icon: "⚡",
+        description: "Professional electrical drawings for residential, commercial and institutional buildings.",
+        list: [
+            "Electrical layout drawings",
+            "Lighting and power layouts",
+            "Wiring diagrams",
+            "Single line diagrams",
+            "Distribution board layouts",
+            "Detailed electrical design"
+        ]
+    },
+
+    "3D Lighting Design": {
+        icon: "💡",
+        description: "Modern lighting concepts and realistic 3D visualization to create attractive, comfortable and functional spaces.",
+        list: [
+            "3D lighting visualization",
+            "Lighting fixture selection",
+            "Interior lighting concepts",
+            "Decorative lighting design",
+            "Lighting placement",
+            "Realistic design presentation"
+        ]
+    },
+
+    "Load & Illumination Calculation": {
+        icon: "📐",
+        description: "Professional electrical load and illumination calculations to ensure proper system sizing and suitable lighting levels.",
+        list: [
+            "Connected load calculation",
+            "Maximum demand calculation",
+            "Lighting load calculation",
+            "Illumination / lux calculation",
+            "Load schedule preparation",
+            "Electrical system sizing support"
+        ]
+    },
+
+    "Cost Estimation": {
+        icon: "💰",
+        description: "Detailed electrical cost estimation to help clients understand project costs and plan construction budgets.",
+        list: [
+            "Electrical material quantity take-off",
+            "Material cost estimation",
+            "Labour cost estimation",
+            "Electrical BOQ preparation",
+            "Equipment cost estimation",
+            "Project budget support"
+        ]
+    },
+
+    "Electrical Engineering Consultant": {
+        icon: "👷",
+        description: "Professional electrical engineering consultancy and technical support for building projects.",
+        list: [
+            "Electrical design review",
+            "Technical consultation",
+            "Electrical system planning",
+            "Design coordination",
+            "Site technical support",
+            "Engineering recommendations"
+        ]
+    },
+
+    "HVAC System": {
+        icon: "❄️",
+        description: "HVAC electrical planning and coordination for efficient and reliable building mechanical services.",
+        list: [
+            "HVAC electrical requirements",
+            "Power supply planning",
+            "Equipment power calculation",
+            "Electrical control requirements",
+            "HVAC system coordination",
+            "Electrical layout support"
+        ]
+    },
+
+    "ELV System": {
+        icon: "🔌",
+        description: "Extra Low Voltage system planning and design for modern buildings and facilities.",
+        list: [
+            "CCTV system",
+            "Data and networking systems",
+            "Access control systems",
+            "Intercom systems",
+            "Security system coordination",
+            "ELV layout and design"
+        ]
+    },
+
+    "Fire Alarm System": {
+        icon: "🔥",
+        description: "Fire alarm system planning and design to provide reliable building fire detection and safety systems.",
+        list: [
+            "Fire alarm layout",
+            "Smoke detector placement",
+            "Heat detector placement",
+            "Manual call point layout",
+            "Fire alarm control panel planning",
+            "System design coordination"
+        ]
+    },
+
+    "Public Address System": {
+        icon: "🔊",
+        description: "Public address and communication system planning for clear and effective audio coverage.",
+        list: [
+            "PA system layout",
+            "Speaker placement",
+            "Amplifier requirements",
+            "Audio coverage planning",
+            "Zone planning",
+            "Public address system coordination"
+        ]
+    },
+
+    "Outdoor Utility System": {
+        icon: "🌐",
+        description: "Outdoor electrical utility planning and infrastructure design for building developments.",
+        list: [
+            "Outdoor lighting",
+            "External electrical distribution",
+            "Utility cable planning",
+            "External power supply",
+            "Outdoor electrical layouts",
+            "Utility infrastructure coordination"
+        ]
+    }
+
+};
+
+
 function openService(serviceName) {
 
     const popup = document.getElementById("servicePopup");
+
     const title = document.getElementById("popupTitle");
+
+    const description = document.getElementById("popupDescription");
+
+    const list = document.getElementById("popupList");
+
+    const icon = document.querySelector(".popup-icon");
+
+    const service = serviceData[serviceName];
+
+    if (!service) {
+        return;
+    }
 
     title.textContent = serviceName;
 
+    description.textContent = service.description;
+
+    icon.textContent = service.icon;
+
+    list.innerHTML = "";
+
+    service.list.forEach(function(item) {
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        list.appendChild(li);
+
+    });
+
     popup.classList.add("active");
+
 }
 
 
@@ -1399,18 +1566,23 @@ function closeService() {
     const popup = document.getElementById("servicePopup");
 
     popup.classList.remove("active");
+
 }
 
 
 document.getElementById("servicePopup").addEventListener("click", function(event) {
 
     if (event.target === this) {
+
         closeService();
+
     }
 
 });
 
+
 </script>
+
 </body>
 
 </html>
